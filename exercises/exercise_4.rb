@@ -15,5 +15,5 @@ Store.create(name: "Yaletown", annual_revenue: 1430000.00, mens_apparel: true, w
 @mens_stores = Store.where(mens_apparel: true)
 @mens_stores.each { |store| puts store.name, store.annual_revenue }
 
-@womens_apparel = Store.where(["womens_apparel = ?  and annual_revenue < ?", true, 1000000])
+@womens_apparel = Store.where(["womens_apparel = ? and annual_revenue < ?", true, 1000000])
 @womens_apparel.each { |store| puts store.name, store.annual_revenue }
